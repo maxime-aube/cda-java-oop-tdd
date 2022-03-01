@@ -48,17 +48,13 @@ public class ColorTest {
         assertEquals(this.color, newColor);
     }
 
-    // TODO => exceptions
-
     @Test
     @Tags({
         @Tag("construct"),
         @Tag("exception")
     })
     public void testColorConstructRGBException() {
-        Color newColor = new Color(this.red, this.green, this.blue);
-        assertNotSame(this.color, newColor);
-        assertEquals(this.color, newColor);
+        assertThrows(IllegalArgumentException.class, ()->new Color(-3, 26, 511), "expected IllegalArgumentException but none was thrown");
     }
 
     @Test
@@ -67,9 +63,21 @@ public class ColorTest {
         @Tag("exception")
     })
     public void testColorConstructHexException() {
-        Color newColor = new Color(this.hexValue);
-        assertNotSame(this.color, newColor);
-        assertEquals(this.color, new Color(this.hexValue));
+
+//        System.out.println(! "#D58DG8".matches("#([0-9A-F]{6})"));
+//        System.out.println(! "#mauvais".matches("#([0-9A-F]{6})"));
+//        System.out.println(! "correct".matches("#([0-9A-F]{6})"));
+
+        // todo => passe même quand in devrait échouer
+
+//        assertThrows(IllegalArgumentException.class, ()->new Color("#D58DG8"), "expected IllegalArgumentException but none was thrown");
+
+        assertAll("Exception not thrown",
+            ()->assertThrows(IllegalArgumentException.class, ()->new Color("#D58DG8"), "expected IllegalArgumentException but none was thrown"),
+            ()->assertThrows(IllegalArgumentException.class, ()->new Color("#mauvais"), "expected IllegalArgumentException but none was thrown"),
+            ()->assertThrows(IllegalArgumentException.class, ()->new Color("correct"), "expected IllegalArgumentException but none was thrown")
+        );
+
     }
 
     /*
@@ -182,7 +190,7 @@ public class ColorTest {
         );
     }
 
-    // TODO => exceptions
+    // todo => setter exceptions
 
     /*
         toString

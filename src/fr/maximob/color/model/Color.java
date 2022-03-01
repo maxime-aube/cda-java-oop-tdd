@@ -8,13 +8,26 @@ public class Color {
     protected int green;
     protected int blue;
 
+    /**
+     *
+     * @param red
+     * @param green
+     * @param blue
+     * @throws IllegalArgumentException Si les valeurs des args ne sont pas des RGB valides
+     */
     public Color(int red, int green, int blue) throws IllegalArgumentException {
-        this.red = red;
-        this.green = green;
-        this.blue = blue;
+        // check if args make are in a valid rgb range
+        if (red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255) {
+            this.red = red;
+            this.green = green;
+            this.blue = blue;
+        } else throw new IllegalArgumentException();
     }
 
     public Color(String hexValue) throws IllegalArgumentException {
+        if (!hexValue.matches("#([0-9A-F]{6})")) {
+            throw new IllegalArgumentException();
+        }
         this.setHexValue(hexValue);
     }
 
