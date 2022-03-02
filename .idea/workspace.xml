@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce840dfe-556d-48fe-b7c8-5fb893bbf8ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/test/fr/peter/color/model/ColorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/maximob/color/model/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/maximob/color/model/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/fr/maximob/color/model/ColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/fr/maximob/color/model/ColorTest.java" afterDir="false" />
@@ -66,11 +67,29 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="fr.maximob.color.model.src.fr.maximob.color.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ColorTest.testColorConstructHexException">
+  <component name="RunManager" selected="JUnit.ColorTest (1)">
+    <configuration name="ColorTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.peter.color.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.peter.color.model" />
+      <option name="MAIN_CLASS_NAME" value="fr.peter.color.model.ColorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd" />
       <extension name="coverage">
@@ -118,7 +137,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ColorTest.testGetRed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ColorTest.testIsValidRGBException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd" />
       <extension name="coverage">
         <pattern>
@@ -128,23 +147,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="fr.maximob.color.model" />
       <option name="MAIN_CLASS_NAME" value="fr.maximob.color.model.ColorTest" />
-      <option name="METHOD_NAME" value="testGetRed" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ColorTest.testGetRedEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tdd" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.maximob.color.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.maximob.color.model" />
-      <option name="MAIN_CLASS_NAME" value="fr.maximob.color.model.ColorTest" />
-      <option name="METHOD_NAME" value="testGetRedEquals" />
+      <option name="METHOD_NAME" value="testIsValidRGBException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ColorTest.testColorConstructHexException" />
+        <item itemvalue="JUnit.ColorTest (1)" />
         <item itemvalue="JUnit.ColorTest" />
+        <item itemvalue="JUnit.ColorTest.testColorConstructHexException" />
+        <item itemvalue="JUnit.ColorTest.testIsValidRGBException" />
         <item itemvalue="JUnit.ColorTest.testColorConstructRGBEquals" />
-        <item itemvalue="JUnit.ColorTest.testGetRedEquals" />
-        <item itemvalue="JUnit.ColorTest.testGetRed" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +175,7 @@
       <workItem from="1646132659520" duration="372000" />
       <workItem from="1646133142962" duration="1739000" />
       <workItem from="1646140478554" duration="207000" />
-      <workItem from="1646140706091" duration="11094000" />
+      <workItem from="1646140706091" duration="16202000" />
     </task>
     <servers />
   </component>

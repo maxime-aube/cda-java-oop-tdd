@@ -53,15 +53,6 @@ public class ColorTest {
         @Tag("construct"),
         @Tag("exception")
     })
-    public void testColorConstructRGBException() {
-        assertThrows(IllegalArgumentException.class, ()->new Color(-3, 26, 511), "expected IllegalArgumentException but none was thrown");
-    }
-
-    @Test
-    @Tags({
-        @Tag("construct"),
-        @Tag("exception")
-    })
     public void testColorConstructHexException() {
 
 //        System.out.println(! "#D58DG8".matches("#([0-9A-F]{6})"));
@@ -72,13 +63,27 @@ public class ColorTest {
 
 //        assertThrows(IllegalArgumentException.class, ()->new Color("#D58DG8"), "expected IllegalArgumentException but none was thrown");
 
-        assertAll("Exception not thrown",
-            ()->assertThrows(IllegalArgumentException.class, ()->new Color("#D58DG8"), "expected IllegalArgumentException but none was thrown"),
-            ()->assertThrows(IllegalArgumentException.class, ()->new Color("#mauvais"), "expected IllegalArgumentException but none was thrown"),
-            ()->assertThrows(IllegalArgumentException.class, ()->new Color("correct"), "expected IllegalArgumentException but none was thrown")
+        assertAll("expected IllegalArgumentException but none was thrown",
+            ()->assertThrows(IllegalArgumentException.class, ()->new Color("#D58DG8"), "Value doesn't check regex as a valid hexadecimal color."),
+            ()->assertThrows(IllegalArgumentException.class, ()->new Color("#mauvais"), "Value doesn't check regex as a valid hexadecimal color."),
+            ()->assertThrows(IllegalArgumentException.class, ()->new Color("correct"), "Value doesn't check regex as a valid hexadecimal color.")
         );
 
     }
+
+    @Test
+    @Tags({
+        @Tag("validator"),
+        @Tag("exception")
+    })
+    public void testIsValidRGBException() {
+        assertAll("expected IllegalArgumentException but none was thrown",
+            ()->assertThrows(IllegalArgumentException.class, ()->this.color.isValidRGBValue(-3), "color can't be a negative number"),
+            ()->assertThrows(IllegalArgumentException.class, ()->this.color.isValidRGBValue(511), "color must be <= 255")
+        );
+    }
+
+
 
     /*
         Getters
@@ -189,8 +194,6 @@ public class ColorTest {
                 ()->assertEquals(hex, this.color.getHexValue(), "getHexValue() est incorrect")
         );
     }
-
-    // todo => setter exceptions
 
     /*
         toString

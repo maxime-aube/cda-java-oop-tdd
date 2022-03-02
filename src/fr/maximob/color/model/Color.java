@@ -8,27 +8,25 @@ public class Color {
     protected int green;
     protected int blue;
 
-    /**
-     *
-     * @param red
-     * @param green
-     * @param blue
-     * @throws IllegalArgumentException Si les valeurs des args ne sont pas des RGB valides
-     */
-    public Color(int red, int green, int blue) throws IllegalArgumentException {
-        // check if args make are in a valid rgb range
-        if (red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255) {
-            this.red = red;
-            this.green = green;
-            this.blue = blue;
-        } else throw new IllegalArgumentException();
+    public Color(int red, int green, int blue) {
+        this.setRed(red);
+        this.setGreen(green);
+        this.setBlue(blue);
     }
 
     public Color(String hexValue) throws IllegalArgumentException {
-        if (!hexValue.matches("#([0-9A-F]{6})")) {
-            throw new IllegalArgumentException();
-        }
+        if (hexValue == null) throw new IllegalArgumentException();
         this.setHexValue(hexValue);
+    }
+
+    public boolean isValidRGBValue(int color) {
+        if (! (color >= 0 && color <= 255)) return false;
+        return true;
+    }
+
+    public boolean isValidHexValue(String hexValue) {
+        if (hexValue.length() != 7 || !hexValue.matches("#([0-9A-F]{6})")) return false;
+        return true;
     }
 
     public int getRed() {
@@ -48,21 +46,28 @@ public class Color {
     }
 
     public void setRed(int red) throws IllegalArgumentException {
+        if (!this.isValidRGBValue(red)) throw new IllegalArgumentException();
         this.red = red;
     }
 
     public void setGreen(int green) throws IllegalArgumentException {
+        if (!this.isValidRGBValue(green)) throw new IllegalArgumentException();
         this.green = green;
     }
 
     public void setBlue(int blue) throws IllegalArgumentException {
+        if (!this.isValidRGBValue(blue)) throw new IllegalArgumentException();
         this.blue = blue;
     }
 
     public void setHexValue(String hexValue) throws IllegalArgumentException {
-        this.red = Integer.valueOf(hexValue.substring(1, 3), 16);
-        this.green = Integer.valueOf(hexValue.substring(3, 5), 16);
-        this.blue = Integer.valueOf(hexValue.substring(5, 7), 16);
+        if (hexValue == null || !isValidHexValue(hexValue)) throw new IllegalArgumentException();
+        int red = Integer.valueOf(hexValue.substring(1, 3), 16);
+        int green = Integer.valueOf(hexValue.substring(3, 5), 16);
+        int blue = Integer.valueOf(hexValue.substring(5, 7), 16);
+        if (this.isValidRGBValue(red)) this.red = red;
+        if (this.isValidRGBValue(green)) this.green = green;
+        if (this.isValidRGBValue(blue)) this.blue = blue;
     }
 
     public String toString() {
