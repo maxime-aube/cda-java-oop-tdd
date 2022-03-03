@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="color:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/color_jar</output-path>
+    <root id="archive" name="color.jar">
+      <element id="module-output" name="tdd" />
+    </root>
+  </artifact>
+</component>

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="color:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce840dfe-556d-48fe-b7c8-5fb893bbf8ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test/fr/peter/color/model/ColorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/color_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/maximob/color/model/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/maximob/color/model/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fr/maximob/color/model/ColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/fr/maximob/color/model/ColorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +60,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fr/maximob/color/model" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -74,18 +79,10 @@
       <recent name="fr.maximob.color.model.src.fr.maximob.color.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ColorTest (1)">
-    <configuration name="ColorTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Color">
+    <configuration name="Color" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="fr.maximob.color.model.Color" />
       <module name="tdd" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.peter.color.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.peter.color.model" />
-      <option name="MAIN_CLASS_NAME" value="fr.peter.color.model.ColorTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,6 +97,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="fr.maximob.color.model" />
       <option name="MAIN_CLASS_NAME" value="fr.maximob.color.model.ColorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.peter.color.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.peter.color.model" />
+      <option name="MAIN_CLASS_NAME" value="fr.peter.color.model.ColorTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,6 +166,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Color" />
+      <item itemvalue="JUnit.ColorTest" />
+      <item itemvalue="JUnit.ColorTest.testColorConstructHexException" />
+      <item itemvalue="JUnit.ColorTest.testColorConstructRGBEquals" />
+      <item itemvalue="JUnit.ColorTest.testIsValidRGBException" />
+      <item itemvalue="JUnit.ColorTest (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ColorTest (1)" />
@@ -175,7 +196,8 @@
       <workItem from="1646132659520" duration="372000" />
       <workItem from="1646133142962" duration="1739000" />
       <workItem from="1646140478554" duration="207000" />
-      <workItem from="1646140706091" duration="16202000" />
+      <workItem from="1646140706091" duration="17695000" />
+      <workItem from="1646314435941" duration="1381000" />
     </task>
     <servers />
   </component>
@@ -195,6 +217,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/fr/maximob/color/model/Color.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cda_java_oop_tdd$ColorTest_testColorConstructHexException.ic" NAME="ColorTest.testColorConstructHexException Coverage Results" MODIFIED="1646151354507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

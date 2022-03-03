@@ -19,6 +19,10 @@ public class Color {
         this.setHexValue(hexValue);
     }
 
+    public static void main(String[] args) {
+
+    }
+
     public boolean isValidRGBValue(int color) {
         if (! (color >= 0 && color <= 255)) return false;
         return true;
